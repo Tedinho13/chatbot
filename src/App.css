@@ -7,6 +7,7 @@
 :root {
     --primary-color: #12a1a1;
     --accents-color: #108686;
+    --text-gray-color: #d8d4d4;
 }
 
 html {
@@ -14,10 +15,14 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-   padding: 1rem;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: 0 auto;
 }
-
 
 @media(min-width: 768px) {
   html {
@@ -28,6 +33,12 @@ body {
 /* MESSAGE-BOX */
 
 .messages-container {
-  margin: 2rem auto;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-behavior: auto;
+  max-height: 90vh;
+  padding: 1rem;
+  flex-grow: 1;
   max-width: 1400px;
 }
+

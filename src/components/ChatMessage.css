@@ -25,6 +25,7 @@
     border-radius: 10px;
     background-color: rgb(190, 187, 187);
     font-size: 1.3rem;
+    max-width: 70%;
 }
 
 .avatar {
