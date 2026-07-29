@@ -3,7 +3,7 @@ import { useState } from "react";
 import './ChatInput.css';
 import '../data/chatbot';
 
-function ChatInput({onSendMessage, setLoading}) {
+function ChatInput({onSendMessage, onReset, setLoading}) {
     const [inputValue, setInputValue] = useState("");
     
 
@@ -29,6 +29,7 @@ function ChatInput({onSendMessage, setLoading}) {
             onChange={(e) => setInputValue(e.target.value)} 
             placeholder="Send message to a chatbot" />
             <button className="form__button">Send</button>
+            <button type="reset" className="form__button form__button--reset" onClick={onReset}>Clear</button>
         </form>
      );
 }
