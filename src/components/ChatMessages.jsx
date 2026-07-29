@@ -11,6 +11,8 @@ function ChatMessages({messages, loading}) {
 
     const messagesContainerRef = useRef(null);
 
+    const loadingSpinner = <img className="message__spinner" src={Spinner}></img>
+    
     useEffect(() => {
        const messagesContainer = messagesContainerRef.current;
        if(messagesContainer) {
@@ -21,7 +23,7 @@ function ChatMessages({messages, loading}) {
     return (
         <div className="messages-container" ref={messagesContainerRef}>
             {content}
-            {loading ? <div className='message'><img className="message__spinner" src={Spinner}></img></div> : ""}
+            {loading && <ChatMessage msg={loadingSpinner} sender="ai" />}
         </div>
     )
 }

@@ -6,8 +6,6 @@
 }
 
 .message__spinner {
-    width: 3rem;
-    height: 3rem;
-    background-color: rgb(190, 187, 187);
-    border-radius: 10px;
+    width: 2.5rem;
+    height: 2.5rem;
 }

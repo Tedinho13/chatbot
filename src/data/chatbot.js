@@ -7,6 +7,7 @@ const Chatbot = {
     "how are you": `I'm doing great! How can I help you?`,
     "do you like anime girls?": "Yeah, I love them!",
     "how are you feeling?": "I am great, thank you!",
+    "What's your name?": "My name is NagashAI.",
     "flip a coin": function () {
       const randomNumber = Math.random();
       if (randomNumber < 0.5) {
@@ -43,16 +44,7 @@ const Chatbot = {
     thank: "No problem! Let me know if you need help with anything else!",
   },
 
-  additionalResponses: {},
-
   unsuccessfulResponse: `Sorry, I didn't quite understand that. Currently, I only know how to flip a coin, roll a dice, or get today's date. Let me know how I can help!`,
-
-  addResponses: function (additionalResponses) {
-    this.additionalResponses = {
-      ...this.additionalResponses,
-      ...additionalResponses,
-    };
-  },
 
   getResponse: function (message) {
     // This spread operator (...) combines the 2 objects.

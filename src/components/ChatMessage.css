@@ -18,14 +18,22 @@
 
 .message__text {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    gap: .2rem;
+    color: var(--white-color);
     padding: .5rem .8rem;
     border-radius: 10px;
-    background-color: rgb(190, 187, 187);
+    background-color: var(--bgc-gray-color-2);
     font-size: 1.3rem;
     max-width: 70%;
+}
+
+.message__time {
+    align-self: flex-end;
+    font-size: .9rem;
+    color: var(--dark-color);
 }
 
 .avatar {
