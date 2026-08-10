@@ -11,7 +11,7 @@ function ChatMessage({msg, sender}) {
     return (
         <div className={`message message--${direction}`}>
             <p className="message__text">{msg}
-                <p className='message__time'>{time}</p>
+                <span className='message__time'>{time}</span>
             </p>
             {avatar}
         </div>
