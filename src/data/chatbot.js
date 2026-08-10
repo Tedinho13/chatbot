@@ -161,7 +161,8 @@ const Chatbot = {
       const facts = [
         `A cloud weighs around a million tonnes. A cloud typically has a volume of around 1km3 and a density of around 1.003kg per m3 – that's a density that’s around 0.4 per cent lower than the air surrounding it.`,
         `Identical twins don’t have the same fingerprints. You can’t blame your crimes on your twin, after all. This is because environmental factors during development in the womb (umbilical cord length, position in the womb, and the rate of finger growth) impact your fingerprint.`,
-        `Earlobes have no biological purpose. While they are rich in nerve endings and may play a role in social bonding, many scientists argue that earlobes don’t have any true biological purpose.``Mars isn’t actually round. Unlike any other rocky planet in the Solar System, Mars is actually shaped like a rugby ball, but with different sizes along all three axes.`,
+        `Earlobes have no biological purpose. While they are rich in nerve endings and may play a role in social bonding, many scientists argue that earlobes don’t have any true biological purpose.`,
+        `Mars isn’t actually round. Unlike any other rocky planet in the Solar System, Mars is actually shaped like a rugby ball, but with different sizes along all three axes.`,
         `There’s no such thing as zero-calorie foods. Even low-calorie foods, such as celery and watercress, contain more energy than the body needs to process them.`,
         `Around 8–10 per cent of people grind their teeth at night. The process is called sleep bruxism, and most people aren't even aware they're doing it.`,
         `The Universe's average colour is called 'Cosmic latte'. In a 2002 study, astronomers found that the light coming from galaxies averaged into a beige colour that’s close to white.`,
@@ -205,6 +206,221 @@ const Chatbot = {
     },
     thank: "No problem! Let me know if you need help with anything else!",
     bye: "Bye! See you again!",
+
+    // ===== POLSKIE WERSJE =====
+
+    "cześć hej": "Cześć! Jak mogę pomóc?",
+    "jak się masz": "Mam się świetnie! Jak mogę Ci pomóc?",
+    "lubisz dziewczyny z anime": "Tak, uwielbiam je!",
+    "jak się czujesz": "Czuję się świetnie, dziękuję!",
+    "jak masz na imię": "Mam na imię NagashAI.",
+    "czy jesteś prawdziwy":
+      "Nie, jestem tylko chatbotem z wcześniej przygotowanymi odpowiedziami.",
+    "kto cię stworzył": "Zostałem stworzony przez Nagasha, to mój twórca.",
+    "jakie jest twoje ulubione anime": "Death Note",
+    "jaka jest twoja ulubiona gra": "Red Dead Redemption 2",
+    "czy śnisz":
+      "Nie, nie mogę śnić, ponieważ nie śpię, nie posiadam biologicznego mózgu ani podświadomości.",
+    "czy jesteś inteligentny":
+      "Nie mam prawdziwej inteligencji. Mam jedynie wcześniej przygotowane odpowiedzi.",
+    "co potrafisz":
+      "Kilka rzeczy. Jestem prostym chatbotem. Potrafię odpowiadać na proste pytania, rzucać monetą, rzucać kostką i podać dzisiejszą datę.",
+
+    "co to jest react":
+      "React to darmowa, otwartoźródłowa biblioteka JavaScript do tworzenia interaktywnych interfejsów użytkownika.",
+
+    "co to jest javascript":
+      "JavaScript to język programowania używany do dodawania interaktywności na stronach internetowych.",
+
+    "co to jest css":
+      "CSS służy do stylizowania wyglądu stron internetowych, na przykład kolorów, czcionek i odstępów.",
+
+    "co to jest vite":
+      "Vite to bardzo szybkie narzędzie do tworzenia aplikacji frontendowych i lokalny serwer deweloperski.",
+
+    "co to jest api":
+      "API to interfejs pozwalający dwóm aplikacjom komunikować się ze sobą za pomocą żądań i odpowiedzi.",
+
+    "wybierz liczbę": function () {
+      const drawedNumber = Math.floor(Math.random() * 100);
+      return drawedNumber;
+    },
+
+    "tak czy nie": function () {
+      const responses = ["tak", "nie"];
+      return this.drawResponse(responses);
+    },
+
+    "ciasteczko z wróżbą": function () {
+      const fortunes = [
+        "Podziel się swoim szczęściem z innymi, a przyniesie Ci ono więcej szczęścia",
+        "Piękno nie tkwi w twarzy, lecz w świetle serca",
+        "Kto wie, że ma wystarczająco dużo, ten jest bogaty",
+        "Wszystek wysiłek, który wkładasz, ostatecznie się opłaci",
+        "Nie porównuj się do najlepszych innych, ale do najlepszej wersji siebie",
+        "Jesteś silny i odważny, wykorzystaj te cechy, aby przetrwać trudności",
+        "Nie płacz, że coś się skończyło. Ciesz się, że się wydarzyło.",
+      ];
+      return this.drawResponse(fortunes);
+    },
+
+    "wybierz kolor": function () {
+      const colors = [
+        "czerwony",
+        "zielony",
+        "niebieski",
+        "żółty",
+        "czarny",
+        "biały",
+        "pomarańczowy",
+        "różowy",
+        "fioletowy",
+        "brązowy",
+        "szary",
+      ];
+      return this.drawResponse(colors);
+    },
+
+    "wybierz gatunek filmu": function () {
+      const genres = [
+        "akcja",
+        "komedia",
+        "dramat",
+        "romans",
+        "science fiction",
+        "horror",
+        "sztuki walki",
+        "przygodowy",
+        "western",
+        "thriller",
+      ];
+      return this.drawResponse(genres);
+    },
+
+    "wybierz anime": function () {
+      const animes = [
+        "Demon Slayer",
+        "Dragon Ball",
+        "Death Note",
+        "My Hero Academia",
+        "Fairy Tail",
+        "Hunter x Hunter",
+        "Tokyo Ghoul",
+        "Berserk",
+      ];
+      return `Polecam ${this.drawResponse(animes)}`;
+    },
+
+    "jest mi smutno": function () {
+      const responses = [
+        "To w porządku czuć smutek. Ten moment minie.",
+        "Weź jeden spokojny oddech i pozwól sobie odpocząć.",
+        "Smutek jest naturalną reakcją człowieka na trudne wydarzenia i zmiany.",
+      ];
+      return this.drawResponse(responses);
+    },
+
+    "nudzi mi się": function () {
+      const responses = [
+        "Może spróbujesz czegoś nowego albo szalonego?",
+        "Krótki spacer, nowa umiejętność albo rozmowa z kimś mogą poprawić nastrój.",
+        "Czasem nuda oznacza po prostu, że potrzebujesz odpoczynku.",
+      ];
+      return this.drawResponse(responses);
+    },
+
+    "potrzebuję wsparcia": function () {
+      const incentives = [
+        "Jesteś silniejszy, niż myślisz.",
+        "Nawet mały postęp nadal jest postępem.",
+        "Przetrwałeś już wszystkie trudne dni do tego momentu.",
+      ];
+      return this.drawResponse(incentives);
+    },
+
+    "daj mi cytat": function () {
+      const quotes = [
+        "Nie traktuj życia zbyt poważnie. I tak nie wyjdziesz z niego żywy.",
+        "Nic nie jest niemożliwe.",
+        "Życie jest albo wielką przygodą, albo niczym.",
+        "W łagodny sposób możesz wstrząsnąć światem.",
+        "Dobry gest potrafi dotrzeć do ran, które leczy tylko współczucie.",
+      ];
+      return this.drawResponse(quotes);
+    },
+
+    "zmotywuj mnie": function () {
+      const motivations = [
+        "Działanie tworzy motywację, nie odwrotnie.",
+        "Uwierz, że możesz, a jesteś w połowie drogi.",
+        "To zawsze wydaje się niemożliwe, dopóki nie zostanie zrobione.",
+        "Doskonałość jest nawykiem.",
+        "Sukces to suma małych wysiłków powtarzanych każdego dnia.",
+      ];
+      return this.drawResponse(motivations);
+    },
+
+    "opowiedz żart": function () {
+      const jokes = [
+        "Dlaczego Francuzi jedzą ślimaki? Bo nie lubią fast foodów.",
+        "Dlaczego żarty o windach są takie dobre? Bo działają na wielu poziomach.",
+        "Dlaczego nie można opowiedzieć żartu jajku? Bo może pęknąć ze śmiechu.",
+        "Co zawsze spada i nigdy się nie rani? Deszcz.",
+        "Dlaczego człowiek wyrzucił zegar przez okno? Chciał, żeby czas leciał.",
+      ];
+      return this.drawResponse(jokes);
+    },
+
+    "powiedz ciekawostkę": function () {
+      const facts = [
+        "Chmura może ważyć około miliona ton.",
+        "Bliźnięta jednojajowe nie mają identycznych odcisków palców.",
+        "Mars nie jest idealnie okrągły.",
+        "Nie istnieją naprawdę produkty o zerowej kaloryczności.",
+        "Noworodki nie widzą wyłącznie w czerni i bieli.",
+      ];
+      return this.drawResponse(facts);
+    },
+
+    "rzuć monetą": function () {
+      const randomNumber = Math.random();
+      if (randomNumber < 0.5) {
+        return "Wypadł orzeł";
+      } else {
+        return "Wypadła reszka";
+      }
+    },
+
+    "rzuć kostką": function () {
+      const diceResult = Math.floor(Math.random() * 6) + 1;
+      return `Wypadło ${diceResult}`;
+    },
+
+    "jaka jest dzisiaj data": function () {
+      const now = new Date();
+      const months = [
+        "stycznia",
+        "lutego",
+        "marca",
+        "kwietnia",
+        "maja",
+        "czerwca",
+        "lipca",
+        "sierpnia",
+        "września",
+        "października",
+        "listopada",
+        "grudnia",
+      ];
+
+      const month = months[now.getMonth()];
+      const day = now.getDate();
+
+      return `Dzisiaj jest ${day} ${month}`;
+    },
+    "dziękuję": "Nie ma problemu! Daj znać, jeśli będziesz czegoś potrzebować.",
+    "pa pa": "Pa! Do zobaczenia ponownie!",
+    "do widzenia": "Do widzenia! Miłego dnia!",
   },
 
   unsuccessfulResponse: `Sorry, I didn't quite understand that. Currently, I only know how to flip a coin, roll a dice, or get today's date. Let me know how I can help!`,
