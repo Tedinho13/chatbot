@@ -24,10 +24,11 @@ function ChatInput({onSendMessage, onReset, setLoading}) {
 
     return ( 
         <form className="form" onSubmit={handleSubmit}>
-            <input className="form__input" 
+            <label htmlFor="chat-input" className="sr-only">Send message to a chatbot</label>
+            <input id="chat-input" className="form__input" 
             type="text" value={inputValue} 
             onChange={(e) => setInputValue(e.target.value)} 
-            placeholder="Send message to a chatbot" />
+            placeholder="Send message to a chatbot"/>
             <button className="form__button">Send</button>
             <button type="reset" className="form__button form__button--reset" onClick={onReset}>Clear</button>
         </form>

@@ -34,6 +34,10 @@ html {
   }
 }
 
+.sr-only {
+  display: none;
+}
+
 /* MESSAGE-BOX */
 
 .messages-container {
