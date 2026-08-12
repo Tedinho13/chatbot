@@ -419,7 +419,7 @@ const Chatbot = {
       return `Dzisiaj jest ${day} ${month}`;
     },
 
-    "dziękuję": "Nie ma problemu! Daj znać, jeśli będziesz czegoś potrzebować.",
+    dziękuję: "Nie ma problemu! Daj znać, jeśli będziesz czegoś potrzebować.",
     "pa pa": "Pa! Do zobaczenia ponownie!",
     "do widzenia": "Do widzenia! Miłego dnia!",
   },

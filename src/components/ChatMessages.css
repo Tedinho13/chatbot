@@ -1,5 +1,10 @@
 .welcome-message {
-    line-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 1rem;
+    width: 100%;
     text-align: center;
     color: var(--text-gray-color);
     font-size: 1.3rem;
